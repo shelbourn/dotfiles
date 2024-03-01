@@ -1,0 +1,4 @@
+0000000000000000000000000000000000000000 ba31c4857f8f96c4180e4f9f6e07734feb191e85 Matthew Shelbourn <11466465+shelbourn@users.noreply.github.com> 1709183212 -0600	commit (initial): Init commit :rocket:
+ba31c4857f8f96c4180e4f9f6e07734feb191e85 65fa7fafcc50aa327898816fc965dd3fbe3acbf3 Matthew Shelbourn <11466465+shelbourn@users.noreply.github.com> 1709230451 -0600	pull --ff --recurse-submodules --progress origin: Fast-forward
+65fa7fafcc50aa327898816fc965dd3fbe3acbf3 1f66cb796ea4eabe4193d2ed8a93fb1871c58d25 Matthew Shelbourn <11466465+shelbourn@users.noreply.github.com> 1709243224 -0600	commit: updating directory and dependency structure
+1f66cb796ea4eabe4193d2ed8a93fb1871c58d25 14afa841f8b6a166a65efa90668e16136fa9ec86 Matthew Shelbourn <11466465+shelbourn@users.noreply.github.com> 1709270552 -0600	commit: lsp, rustacean, cmp

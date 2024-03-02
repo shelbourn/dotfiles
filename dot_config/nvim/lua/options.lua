@@ -8,3 +8,5 @@ set.cursorline = true
 set.tabstop = 4
 set.shiftwidth = 4
 set.expandtab = true
+
+set.nu = true

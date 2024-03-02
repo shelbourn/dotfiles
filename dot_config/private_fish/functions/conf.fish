@@ -1,3 +1,3 @@
-function conf --description 'Change active directory to .config/nvim'
-    cd ~/.config/nvim
+function conf --description 'Change active directory to .config'
+    cd ~/.config
 end

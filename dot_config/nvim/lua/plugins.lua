@@ -10,7 +10,7 @@ Plug('neovim/nvim-lspconfig')
 Plug('williamboman/mason.nvim')
 Plug('williamboman/mason-lspconfig.nvim')
 Plug('mrcjkb/rustaceanvim', {
-    ['tag'] = '4'
+    ['tag'] = '4*'
 })
 
 -- completion
@@ -38,7 +38,6 @@ Plug('nvim-telescope/telescope.nvim', {
 })
 Plug('BurntSushi/ripgrep')
 Plug('vim-scripts/telescope-fzf-native.nvim')
-Plug('sharkdp/fd')
 
 -- diagnostics
 Plug('folke/trouble.nvim', {

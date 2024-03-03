@@ -2,6 +2,8 @@
 -- Keybindings
 ---
 
+local vim = vim
+
 vim.api.nvim_create_autocmd('LspAttach', {
   desc = 'LSP actions',
   callback = function()
@@ -76,9 +78,18 @@ local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 lspconfig.tsserver.setup({
   capabilities = lsp_capabilities,
 })
-lspconfig.lua_ls.setup({
-  capabilities = lsp_capabilities,
-})
+lspconfig["lua_ls"].setup({
+      capabilities = lsp_capabilities,
+      -- suppressing undefined global vim warning 
+      settings = { -- custom settings for lua
+        Lua = {
+          -- make the language server recognize "vim" global
+          diagnostics = {
+            globals = { "vim" },
+          },
+        },
+      },
+    })
 --lspconfig.rust_analyzer.setup({
 --  capabilities = lsp_capabilities,
 --})

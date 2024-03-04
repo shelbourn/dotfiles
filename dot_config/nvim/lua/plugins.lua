@@ -36,7 +36,6 @@ Plug('nvim-lua/plenary.nvim')
 Plug('nvim-telescope/telescope.nvim', {
     ['tag'] = '0.1.5'
 })
-Plug('BurntSushi/ripgrep')
 Plug('vim-scripts/telescope-fzf-native.nvim')
 
 -- diagnostics

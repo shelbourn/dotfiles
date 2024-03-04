@@ -1,5 +1,6 @@
 local set = vim.opt
 local global = vim.g
+local keymap = vim.keymap.set
 
 set.termguicolors = true
 
@@ -18,5 +19,10 @@ set.listchars = { eol = '$', tab = '>-', trail = '~', extends = '>', precedes = 
 set.list = true
 
 -- keymap
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+
+-- leaders
+global.mapleader = ' '
+global.maplocalleader = ' '
+
+-- deselect (:noh)
+keymap('n', '<Leader>noh', vim.cmd.noh)

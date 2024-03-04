@@ -18,5 +18,5 @@ set.listchars = { eol = '$', tab = '>-', trail = '~', extends = '>', precedes = 
 set.list = true
 
 -- keymap
-vim.g.mapleader = ';'
-vim.g.maplocalleader = ';'
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '

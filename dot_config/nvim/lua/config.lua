@@ -18,7 +18,11 @@ set.numberwidth = 2
 set.listchars = { eol = '$', tab = '>-', trail = '~', extends = '>', precedes = '<' }
 set.list = true
 
--- keymap
+set.clipboard = 'unnamed'
+
+-----
+--keybinds
+-----
 
 -- leaders
 global.mapleader = ' '

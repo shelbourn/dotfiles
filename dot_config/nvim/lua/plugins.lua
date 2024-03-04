@@ -36,7 +36,7 @@ Plug('nvim-lua/plenary.nvim')
 Plug('nvim-telescope/telescope.nvim', {
     ['tag'] = '0.1.5'
 })
-Plug('vim-scripts/telescope-fzf-native.nvim')
+Plug('nvim-telescope/telescope-fzf-native.nvim')
 
 -- diagnostics
 Plug('folke/trouble.nvim', {

@@ -1,6 +1,7 @@
 local set = vim.opt
 local global = vim.g
 local keymap = vim.keymap.set
+local cmd = vim.cmd
 
 set.termguicolors = true
 
@@ -20,6 +21,9 @@ set.list = true
 
 set.clipboard = 'unnamed'
 
+-- syntax config
+cmd('syntax on')
+cmd('filetype plugin indent on')
 -----
 --keybinds
 -----

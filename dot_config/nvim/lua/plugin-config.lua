@@ -1,4 +1,18 @@
 -----
+--local vars
+-----
+
+local keymap = vim.keymap.set
+local cmd = vim.cmd
+local global = vim.g
+
+-----
+--color scheme initialization
+-----
+
+cmd('colorscheme kanagawa-wave')
+
+-----
 --Configs and keybinds for plugins
 -----
 
@@ -12,10 +26,10 @@ require('vacuumline').setup({
 -- telescope initialization and config
 require('telescope').setup()
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+keymap('n', '<leader>ff', builtin.find_files, {})
+keymap('n', '<leader>fg', builtin.live_grep, {})
+keymap('n', '<leader>fb', builtin.buffers, {})
+keymap('n', '<leader>fh', builtin.help_tags, {})
 
 local actions = require("telescope.actions")
 require("telescope").setup{
@@ -29,12 +43,12 @@ require("telescope").setup{
 }
 
 -- trouble keybinds
-vim.keymap.set("n", "<leader>xx", function() require("trouble").toggle() end)
-vim.keymap.set("n", "<leader>xw", function() require("trouble").toggle("workspace_diagnostics") end)
-vim.keymap.set("n", "<leader>xd", function() require("trouble").toggle("document_diagnostics") end)
-vim.keymap.set("n", "<leader>xq", function() require("trouble").toggle("quickfix") end)
-vim.keymap.set("n", "<leader>xl", function() require("trouble").toggle("loclist") end)
-vim.keymap.set("n", "gR", function() require("trouble").toggle("lsp_references") end)
+keymap("n", "<leader>xx", function() require("trouble").toggle() end)
+keymap("n", "<leader>xw", function() require("trouble").toggle("workspace_diagnostics") end)
+keymap("n", "<leader>xd", function() require("trouble").toggle("document_diagnostics") end)
+keymap("n", "<leader>xq", function() require("trouble").toggle("quickfix") end)
+keymap("n", "<leader>xl", function() require("trouble").toggle("loclist") end)
+keymap("n", "gR", function() require("trouble").toggle("lsp_references") end)
 
 -- prettier path resolution (`which prettier` -- then follow the symlink
-vim.g['prettier#exec_cmd_path'] = '/usr/local/lib/node_modules/prettier/bin/prettier.cjs'
+global['prettier#exec_cmd_path'] = '/usr/local/lib/node_modules/prettier/bin/prettier.cjs'

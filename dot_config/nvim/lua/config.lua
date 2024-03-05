@@ -42,3 +42,7 @@ keymap({'n', 'v'}, '<leader>D', '"+D') -- delete line
 -- Paste from system clipboard
 keymap('n', '<leader>p', '"+p')  -- paste after cursor
 keymap('n', '<leader>P', '"+P')  -- paste before cursor
+
+-- Inserting lines above/below without leaving normal mode
+keymap('n', '<leader>o', 'o<Esc>')  -- insert line below
+keymap('n', '<leader>O', 'O<Esc>')  -- insert line above

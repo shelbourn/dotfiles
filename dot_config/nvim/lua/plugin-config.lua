@@ -36,3 +36,5 @@ vim.keymap.set("n", "<leader>xq", function() require("trouble").toggle("quickfix
 vim.keymap.set("n", "<leader>xl", function() require("trouble").toggle("loclist") end)
 vim.keymap.set("n", "gR", function() require("trouble").toggle("lsp_references") end)
 
+-- prettier path resolution (`which prettier` -- then follow the symlink
+vim.g['prettier#exec_cmd_path'] = '/usr/local/lib/node_modules/prettier/bin/prettier.cjs'

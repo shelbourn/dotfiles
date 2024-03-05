@@ -26,6 +26,9 @@ Plug('prettier/vim-prettier', {
     ['for'] = {'javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'}
 })
 
+-- git
+Plug('tpope/vim-fugitive')
+
 -- lsp
 Plug('rust-lang/rust.vim')
 Plug('neovim/nvim-lspconfig')

@@ -47,11 +47,11 @@
   "Draw Powerline Glyphs" : true,
   "Flashing Bell" : false,
   "Cursor Guide Color" : {
-    "Red Component" : 0.70214027166366577,
+    "Red Component" : 0.40769921582544555,
     "Color Space" : "sRGB",
-    "Blue Component" : 1,
+    "Blue Component" : 0.561065673828125,
     "Alpha Component" : 0.25,
-    "Green Component" : 0.92681378126144409
+    "Green Component" : 0.21497986046597362
   },
   "BM Growl" : true,
   "Ansi 3 Color" : {

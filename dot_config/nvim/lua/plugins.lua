@@ -20,6 +20,9 @@ Plug('folke/trouble.nvim', {
     ['dependencies'] = 'nvim-tree/nvim-web-devicons'
 })
 
+-- tint
+Plug('levouh/tint.nvim')
+
 -- formatting
 Plug('prettier/vim-prettier', {
     ['do'] = 'yarn install --frozen-lockfile --production',

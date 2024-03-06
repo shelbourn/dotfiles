@@ -90,6 +90,9 @@ require("telescope").setup{
   }
 }
 
+-- tint
+require('tint').setup()
+
 -- trouble keybinds
 keymap("n", "<leader>xx", function() require("trouble").toggle() end)
 keymap("n", "<leader>xw", function() require("trouble").toggle("workspace_diagnostics") end)

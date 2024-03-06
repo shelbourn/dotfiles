@@ -37,15 +37,11 @@ Plug('williamboman/mason-lspconfig.nvim')
 Plug('mrcjkb/rustaceanvim', {
     ['tag'] = '4*'
 })
+Plug('folke/lsp-colors.nvim')
 
 -- status line
-Plug('konapun/vacuumline.nvim')
-Plug('glepnir/galaxyline.nvim', {
-    ['branch'] = 'main'
-})
-
+Plug('nvim-lualine/lualine.nvim')
 Plug('nvim-tree/nvim-web-devicons')
-Plug('folke/lsp-colors.nvim')
 
 -- telescope
 Plug('nvim-lua/plenary.nvim')
@@ -53,7 +49,6 @@ Plug('nvim-telescope/telescope.nvim', {
     ['tag'] = '0.1.x'
 })
 Plug('nvim-telescope/telescope-fzf-native.nvim')
-
 
 -- theme
 Plug('rebelot/kanagawa.nvim')

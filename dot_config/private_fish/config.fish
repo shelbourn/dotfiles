@@ -3,3 +3,5 @@ if status is-interactive
 end
 
 pyenv init - | source
+
+set -g fish_color_autosuggestion 92dd94

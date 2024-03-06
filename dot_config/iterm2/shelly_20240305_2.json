@@ -442,7 +442,7 @@
   },
   "Blur" : false,
   "Vertical Spacing" : 1,
-  "Normal Font" : "FiraCodeNFP-Reg 16",
+  "Normal Font" : "FiraCodeNF-Reg 16",
   "Use Underline Color" : false,
   "Ansi 7 Color" : {
     "Red Component" : 1,
@@ -462,6 +462,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.60000002384185791
   },
+  "Unicode Version" : 8,
   "Ansi 6 Color" : {
     "Red Component" : 0.5372549295425415,
     "Color Space" : "sRGB",
@@ -495,12 +496,12 @@
   "Columns" : 80,
   "Visual Bell" : true,
   "Custom Directory" : "No",
+  "ASCII Ligatures" : true,
   "Ansi 5 Color" : {
     "Red Component" : 0.78039216995239258,
     "Color Space" : "sRGB",
     "Blue Component" : 0.91764706373214722,
     "Alpha Component" : 1,
     "Green Component" : 0.57254904508590698
-  },
-  "ASCII Ligatures" : true
+  }
 }

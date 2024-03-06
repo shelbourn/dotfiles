@@ -2,6 +2,7 @@ local set = vim.opt
 local global = vim.g
 local keymap = vim.keymap.set
 local cmd = vim.cmd
+local api = vim.api
 
 set.termguicolors = true
 
@@ -14,7 +15,7 @@ set.expandtab = true
 
 -- numbered lines
 set.nu = true
-set.numberwidth = 2
+set.numberwidth = 4
 
 set.listchars = { eol = '$', tab = '>-', trail = '~', extends = '>', precedes = '<' }
 set.list = true

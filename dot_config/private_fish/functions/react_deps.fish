@@ -3,6 +3,6 @@ function react_deps --description 'Installs/updates Hippo React dependencies. Mu
     echo "Active directory changed to /static/js/react"
     yarn login:ca
     echo "AWS CA login successful"
-    yarn install --frozen-lockfile
+    yarn install --immutable
     hippo
 end

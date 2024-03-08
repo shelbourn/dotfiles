@@ -14,18 +14,22 @@ set.tabstop = 4
 set.shiftwidth = 4
 set.expandtab = true
 
--- numbered lines
+-- gutter
 set.nu = true
-set.numberwidth = 4
+set.numberwidth = 2
+set.signcolumn = 'yes'
 
+-- white space chars
 set.listchars = { eol = '$', tab = '>-', trail = '~', extends = '>', precedes = '<' }
 set.list = true
 
+-- clipboard
 set.clipboard = 'unnamed'
 
 -- syntax config
 cmd('syntax on')
 cmd('filetype plugin indent on')
+
 -----
 -- keybinds
 -----

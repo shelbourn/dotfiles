@@ -8,7 +8,7 @@ function startup --description 'Executes a collection of startup scripts'
     thor_patch
     untrack
     untrack .devcontainer/devcontainer.json
-    untrack elation/elation_billing/services/api_proxy.py
-    untrack elation/elation_billing/services/auth.py
+    # untrack elation/elation_billing/services/api_proxy.py
+    # untrack elation/elation_billing/services/auth.py
     pyenv shell 3.6.15
 end

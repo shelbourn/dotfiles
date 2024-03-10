@@ -7,6 +7,9 @@ pyenv init - | source
 # Sets the auto-complete font color
 set -g fish_color_autosuggestion 92dd94
 
+# Enables command numbers for command history search results
+fish_history --show-numbers
+
 # theming
 set -g theme_nerd_fonts yes
 set -g theme_color_scheme zenburn

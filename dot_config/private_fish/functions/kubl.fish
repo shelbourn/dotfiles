@@ -3,7 +3,7 @@ function kubl --description 'alias for kubectl + args'
 
     # if an argument(s) does exist then pass it(them) to kubectl
     if test -n $kubectl_args
-        kubectl $kubctl_args
+        kubectl $kubectl_args
         return
     end
 

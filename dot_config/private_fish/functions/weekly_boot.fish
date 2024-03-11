@@ -24,7 +24,7 @@ function weekly_boot --description '[Weekly] runs scripts to refresh docker imag
             env_source ~/Projects/Elation/.env
             docker_prune
             docker_images
-            mirage_deps
+            hippo_up_legacy
 
             return
         end
@@ -46,6 +46,6 @@ function weekly_boot --description '[Weekly] runs scripts to refresh docker imag
         env_source ~/Projects/Elation/.env
         docker_prune
         docker_images
-        mirage_deps_mini
+        hippo_up
     end
 end

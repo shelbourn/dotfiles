@@ -1,1 +1,5 @@
-0000000000000000000000000000000000000000 9d47133ba1433b07e1ac9e32fb110851cf1d6368 Matthew Shelbourn <11466465+shelbourn@users.noreply.github.com> 1710051773 -0600	clone: from https://github.com/NvChad/starter
+0000000000000000000000000000000000000000 be70a62658b5829f3eaf49089137e1985c009f83 Matthew Shelbourn <11466465+shelbourn@users.noreply.github.com> 1710125660 -0500	clone: from https://github.com/shelbourn/nvim-nvchad.git
+be70a62658b5829f3eaf49089137e1985c009f83 a25b25398a91390ca10d7c943f68bce521ca5755 Matthew Shelbourn <11466465+shelbourn@users.noreply.github.com> 1710130746 -0500	commit: Updating LSP configs
+a25b25398a91390ca10d7c943f68bce521ca5755 599881df65cbf7d80c6f6cf7d592143fac5224d3 Matthew Shelbourn <11466465+shelbourn@users.noreply.github.com> 1710217851 -0500	commit: Updating configs, arch, helpers, etc
+599881df65cbf7d80c6f6cf7d592143fac5224d3 120ce88b4ca52550127947745936f087533d7490 Matthew Shelbourn <11466465+shelbourn@users.noreply.github.com> 1710307490 -0500	commit: Updating mappings
+120ce88b4ca52550127947745936f087533d7490 4a02939090d49ff306763af32a2a501d6c470742 Matthew Shelbourn <11466465+shelbourn@users.noreply.github.com> 1710308181 -0500	commit: Updating tab stops

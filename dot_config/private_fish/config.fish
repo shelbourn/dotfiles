@@ -5,7 +5,7 @@ end
 pyenv init - | source
 
 # Sets the auto-complete font color
-set -g fish_color_autosuggestion 92dd94
+set -g fish_color_autosuggestion c6c8cc
 
 # theming
 set -g theme_nerd_fonts yes

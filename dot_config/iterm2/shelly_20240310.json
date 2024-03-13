@@ -53,7 +53,7 @@
     "slogin",
     "telnet"
   ],
-  "Scrollback Lines" : 1000,
+  "Scrollback Lines" : 0,
   "Draw Powerline Glyphs" : true,
   "Flashing Bell" : false,
   "Cursor Guide Color" : {
@@ -461,7 +461,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.30980393290519714
   },
-  "Option Key Sends" : 0,
+  "Option Key Sends" : 2,
   "Ansi 15 Color" : {
     "Red Component" : 0.86274510622024536,
     "Color Space" : "sRGB",

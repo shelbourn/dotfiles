@@ -2,7 +2,7 @@ local M = {}
 
 M.ui = {
 	-- themeing
-	theme = "nord",
+	theme = "ashes",
 }
 
 return M

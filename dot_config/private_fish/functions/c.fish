@@ -1,17 +1,3 @@
 function c --description 'Alias for chezmoi with args as $argv'
-    # sets local vars (args)
-    set command $argv[1]
-    set sub_command $argv[2]
-
-    # if no args, run chezmoi normally
-    # if command exists without sub_command, execute chezmoi + command
-    if test -z command
-        chezmoi
-    else if test -z sub_command
-        chezmoi $args
-    end
-
-    # if command and sub_command exist, execute chezmoi + command + sub_command
-    chezmoi $command $sub_command
-
+    chezmoi $argv
 end

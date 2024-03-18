@@ -1,3 +1,3 @@
-function thor --description 'Changes active directory to ~/Projects/LightningMD'
-    cd ~/Projects/LightningMD/source
+function thor --description 'Changes active directory to ~/Projects/Elation/thor-app'
+    cd ~/Projects/Elation/thor-app/
 end

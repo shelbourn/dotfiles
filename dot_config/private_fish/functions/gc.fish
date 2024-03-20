@@ -1,3 +1,3 @@
-function gc --description 'Git commit with message param'
-    git commit -m "$argv"
+function gc --description 'Git commit (interactive message with vi)'
+    git commit
 end

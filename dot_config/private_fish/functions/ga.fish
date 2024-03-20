@@ -1,3 +1,3 @@
-function ga --description 'Stages all git changes'
-git add .
+function ga --description 'Alias for git patch (git add -p)'
+    git add -p
 end

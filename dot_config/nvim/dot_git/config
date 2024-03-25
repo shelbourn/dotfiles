@@ -8,11 +8,14 @@
 [remote "origin"]
 	url = https://github.com/shelbourn/nvim-nvchad.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
-[branch "main"]
-	remote = origin
-	merge = refs/heads/main
 [lfs]
 	repositoryformatversion = 0
 [remote "upstream"]
 	url = https://github.com/NvChad/starter.git
 	fetch = +refs/heads/*:refs/remotes/upstream/*
+[branch "develop"]
+	remote = origin
+	merge = refs/heads/develop
+[branch "main"]
+	remote = upstream
+	merge = refs/heads/main

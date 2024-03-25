@@ -1,6 +1,2 @@
-0000000000000000000000000000000000000000 be70a62658b5829f3eaf49089137e1985c009f83 Matthew Shelbourn <11466465+shelbourn@users.noreply.github.com> 1710125660 -0500	clone: from https://github.com/shelbourn/nvim-nvchad.git
-be70a62658b5829f3eaf49089137e1985c009f83 a25b25398a91390ca10d7c943f68bce521ca5755 Matthew Shelbourn <11466465+shelbourn@users.noreply.github.com> 1710130746 -0500	commit: Updating LSP configs
-a25b25398a91390ca10d7c943f68bce521ca5755 599881df65cbf7d80c6f6cf7d592143fac5224d3 Matthew Shelbourn <11466465+shelbourn@users.noreply.github.com> 1710217851 -0500	commit: Updating configs, arch, helpers, etc
-599881df65cbf7d80c6f6cf7d592143fac5224d3 120ce88b4ca52550127947745936f087533d7490 Matthew Shelbourn <11466465+shelbourn@users.noreply.github.com> 1710307490 -0500	commit: Updating mappings
-120ce88b4ca52550127947745936f087533d7490 4a02939090d49ff306763af32a2a501d6c470742 Matthew Shelbourn <11466465+shelbourn@users.noreply.github.com> 1710308181 -0500	commit: Updating tab stops
-4a02939090d49ff306763af32a2a501d6c470742 33a8a328c2ba0460ce72d52a71959dfda124c63f Matthew Shelbourn <11466465+shelbourn@users.noreply.github.com> 1710552921 -0500	commit: updating configs
+0000000000000000000000000000000000000000 70f66adb594e6854eff5d39ccc13030559a75ae6 Matthew Shelbourn <11466465+shelbourn@users.noreply.github.com> 1711394471 -0500	branch: Created from upstream/main
+70f66adb594e6854eff5d39ccc13030559a75ae6 6a612b80f87ec9ac8ee9a0a81927d1a576b4b183 Matthew Shelbourn <11466465+shelbourn@users.noreply.github.com> 1711394477 -0500	pull --ff --recurse-submodules --progress upstream: Fast-forward

@@ -1,88 +1,108 @@
 return {
-	{
-		"stevearc/conform.nvim",
-		config = function()
-			require("configs.conform")
-		end,
-	},
+    {
+        "stevearc/conform.nvim",
+        -- event = 'BufWritePre', -- uncomment for format on save
+        config = function()
+            require "configs.conform"
+        end,
+    },
 
-	{
-		"nvim-tree/nvim-tree.lua",
-		opts = {
-			git = { enable = true },
-		},
-	},
+    {
+        "nvim-tree/nvim-tree.lua",
+        opts = {
+            git = { enable = true },
+        },
+    },
 
-	------
-	--LSP CONFIGS
-	------
+    ------
+    --LSP CONFIGS
+    ------
 
-	--nvim-lspconfig (loads the LSP servers)
-	{
-		"neovim/nvim-lspconfig",
-		config = function()
-			require("nvchad.configs.lspconfig").defaults()
-			require("configs.lspconfig")
-		end,
-	},
+    --nvim-lspconfig (loads the LSP servers)
+    {
+        "neovim/nvim-lspconfig",
+        config = function()
+            require("nvchad.configs.lspconfig").defaults()
+            require "configs.lspconfig"
+        end,
+    },
 
-	--mason.nvim (installs the LSPs)
-	{
-		"williamboman/mason.nvim",
-		opts = {
-			ensure_installed = {
-				"clangd",
-				"css-lsp",
+    --mason.nvim (installs the LSPs)
+    {
+        "williamboman/mason.nvim",
+        opts = {
+            ensure_installed = {
+                "clangd",
+                "css-lsp",
                 "eslint-lsp",
-				"html-lsp",
-				"lua-language-server",
-				"php-cs-fixer",
-				"prettier",
-				"prettierd",
-				"python-lsp-server",
-				"rust-analyzer",
-				"stylua",
-				"typescript-language-server",
-			},
-		},
-	},
+                "html-lsp",
+                "intelephense",
+                "lua-language-server",
+                "php-cs-fixer",
+                "prettier",
+                "prettierd",
+                "python-lsp-server",
+                "rust-analyzer",
+                "stylua",
+                "terraform-ls",
+                "typescript-language-server",
+            },
+        },
+    },
 
-	------
-	--syntax highlighting
-	------
+    -- lsp_lines.nvim: virtual text for diagnostics instead of real text
+    {
+        "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+        lazy = true,
+        config = function()
+            require("lsp_lines").setup()
+        end,
+    },
 
-	{
-		"nvim-treesitter/nvim-treesitter",
-		opts = {
-			ensure_installed = {
-				-- web dev
-				"css",
-				"html",
-				"javascript",
-				"json",
-				"php",
-				"python",
-				"tsx",
-				"typescript",
+    ------
+    --syntax highlighting
+    ------
 
-				-- low level
-				"c",
-				"rust",
-				"zig",
-			},
-		},
-	},
+    {
+        "nvim-treesitter/nvim-treesitter",
+        opts = {
+            ensure_installed = {
+                -- web dev
+                "css",
+                "dockerfile",
+                "html",
+                "javascript",
+                "jsdoc",
+                "json",
+                "json5",
+                "jq",
+                "lua",
+                "php",
+                "python",
+                "tsx",
+                "terraform",
+                "typescript",
+                "vim",
+                "vimdoc",
 
-	------
-	--context (pinning fn context, var context, etc)
-	------
+                -- low level
+                "c",
+                "rust",
+                "zig",
+            },
+        },
+    },
 
-	{
-		"nvim-treesitter/nvim-treesitter-context",
-		lazy = true,
-    event = require("configs.context_ft"),
-		config = function()
-			require("configs.context")
-		end,
-	},
+    ------
+    --context (pinning fn context, var context, etc)
+    ------
+
+    {
+        "nvim-treesitter/nvim-treesitter-context",
+        lazy = true,
+        event = require "configs.context_ft",
+        config = function()
+            require "configs.context"
+        end,
+    },
 }

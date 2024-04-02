@@ -17,8 +17,8 @@ function weekly_boot --description '[Weekly] runs scripts to refresh docker imag
             echo "...composing up with Mirage enabled"
 
             docker compose down
-            aws_login_1
-            aws_login_2
+            # aws_login_1
+            # aws_login_2
             aws_login_thor
             brew services restart mysql
             env_source ~/Projects/Elation/.env
@@ -39,8 +39,8 @@ function weekly_boot --description '[Weekly] runs scripts to refresh docker imag
         echo "...composing up with Mirage enabled and minified JS"
 
         docker compose down
-        aws_login_1
-        aws_login_2
+        # aws_login_1
+        # aws_login_2
         aws_login_thor
         brew services restart mysql
         env_source ~/Projects/Elation/.env

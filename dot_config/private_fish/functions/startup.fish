@@ -1,11 +1,10 @@
 function startup --description 'Executes a collection of startup scripts'
-    aws_login_1
-    aws_login_2
+    # aws_login_1
+    # aws_login_2
     aws_login_thor
     mysql_env
     hippo
     remote_container_patch
-    thor_patch
     untrack
     untrack .devcontainer/devcontainer.json
     # untrack elation/elation_billing/services/api_proxy.py

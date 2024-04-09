@@ -2,6 +2,7 @@ function hippo_up --description 'Docker up with no legacy build and no dependenc
     # logical branch for no args
     if test -z $argv
         SKIP_LEGACY_FE_BUILD=False SKIP_INSTALL=True docker compose -f docker-compose.yml up -d --remove-orphans
+        return
     end
 
     # logical branch with args

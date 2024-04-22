@@ -6,7 +6,7 @@
 	ignorecase = true
 	precomposeunicode = true
 [remote "origin"]
-	url = https://github.com/shelbourn/nvim-nvchad.git
+	url = git@github.com:shelbourn/nvim-nvchad
 	fetch = +refs/heads/*:refs/remotes/origin/*
 [lfs]
 	repositoryformatversion = 0

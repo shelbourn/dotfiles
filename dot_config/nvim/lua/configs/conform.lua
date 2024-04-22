@@ -5,9 +5,10 @@ local options = {
         javascript = { { "prettierd", "prettier" } },
         javascriptreact = { { "prettierd", "prettier" } },
         json = { { "prettierd", "prettier" } },
+        less = { { "prettierd", "prettier" } },
         lua = { "stylua" },
         -- get this formatter working, it needs a config and I'm not sure how to do it
-        -- php = { "php" },
+        php = { "php" },
         terraform = { "terraform-ls" },
         typescript = { { "prettierd", "prettier" } },
         typescriptreact = { { "prettierd", "prettier" } },

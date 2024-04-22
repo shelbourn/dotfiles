@@ -2,6 +2,7 @@ require "nvchad.options"
 
 local o = vim.o
 local opt = vim.opt
+local lsp = vim.lsp
 
 --tab stops
 opt.shiftwidth = 4
@@ -21,9 +22,19 @@ o.cursorlineopt = "both"
 -- vim.diagnostic.config { virtual_text = false }
 
 --this works but it doesn't use the current API for disabling virtual_text (vim.diagnostic.config())
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-  virtual_text = false,
+lsp.handlers["textDocument/publishDiagnostics"] = lsp.with(lsp.diagnostic.on_publish_diagnostics, {
+    virtual_text = false,
 })
 
 --disabling swap files because they suck and are annoying
 opt.swapfile = false
+
+-- disabling the persistent commmand line when not in use
+opt.cmdheight = 0
+
+-------
+--whitespace highlights
+-------
+opt.list = true
+--I want to set the trail to a middle dot but the encoding is off
+opt.listchars = "tab:-> ,nbsp:+,eol:$"

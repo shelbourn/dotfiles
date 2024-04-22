@@ -7,3 +7,19 @@ d8e5f4b81fdfb263e76469862efceaa4c9f39472 6e2ffbfd92b547cf3f383eb24aa4ea52ee27a59
 6e2ffbfd92b547cf3f383eb24aa4ea52ee27a597 819e324c5f69453a8cab42206e512d4948356246 Matthew Shelbourn <11466465+shelbourn@users.noreply.github.com> 1711378676 -0500	commit: updating configs
 819e324c5f69453a8cab42206e512d4948356246 d69bd517096b12b09e3c20cd3b34763bfcb4ac4b Matthew Shelbourn <11466465+shelbourn@users.noreply.github.com> 1711394821 -0500	pull: Fast-forward
 d69bd517096b12b09e3c20cd3b34763bfcb4ac4b 34f8055cfd2a620bd07fb9960318828d15c8a2a7 Matthew Shelbourn <11466465+shelbourn@users.noreply.github.com> 1711396933 -0500	commit: updating configs
+34f8055cfd2a620bd07fb9960318828d15c8a2a7 d64885a87e671135c6611896c92452f8f6464ea5 shelbourn <11466465+shelbourn@users.noreply.github.com> 1711739661 -0500	commit: Updating cursorline opts
+d64885a87e671135c6611896c92452f8f6464ea5 53cb78fbbb9e8c69327cff94b63de1940941fdf2 shelbourn <11466465+shelbourn@users.noreply.github.com> 1711747475 -0500	commit: Making the telescope finder look sick
+53cb78fbbb9e8c69327cff94b63de1940941fdf2 3c62f2208229ed4f4cbe1884d2d549b7c72c5d9f shelbourn <11466465+shelbourn@users.noreply.github.com> 1711989462 -0500	commit: updating configs
+3c62f2208229ed4f4cbe1884d2d549b7c72c5d9f 0e5a0062b0459237548c7019154720f9f656fb48 shelbourn <11466465+shelbourn@users.noreply.github.com> 1711997606 -0500	commit: adding more configs
+0e5a0062b0459237548c7019154720f9f656fb48 b135d08373643ac1e43e103407e53dfc2a0b6e70 shelbourn <11466465+shelbourn@users.noreply.github.com> 1712006187 -0500	commit: updating configs
+b135d08373643ac1e43e103407e53dfc2a0b6e70 dc35fb475a521019ba76c90d10748125874364fc shelbourn <11466465+shelbourn@users.noreply.github.com> 1712006629 -0500	pull --ff --recurse-submodules --progress origin: Fast-forward
+dc35fb475a521019ba76c90d10748125874364fc 8bf7c797d6ec27a95ad71ad6d51d69a44a28284f shelbourn <11466465+shelbourn@users.noreply.github.com> 1712009837 -0500	commit: adding custom opts for nvim-tree
+8bf7c797d6ec27a95ad71ad6d51d69a44a28284f fbe0aba88ce579a5ec0a6d5bc6f5ad3f4c0d437a shelbourn <11466465+shelbourn@users.noreply.github.com> 1712069351 -0500	commit: updating configs
+fbe0aba88ce579a5ec0a6d5bc6f5ad3f4c0d437a 1a926deadb9d8dfd80858504b1bbe10bcaa2e85c shelbourn <11466465+shelbourn@users.noreply.github.com> 1712071290 -0500	commit: Updating configs
+1a926deadb9d8dfd80858504b1bbe10bcaa2e85c f994e65d2cd4d204a614272e4b0d0a924b1bb3df shelbourn <11466465+shelbourn@users.noreply.github.com> 1712078235 -0500	commit: Adding custom config for nvim-telescope
+f994e65d2cd4d204a614272e4b0d0a924b1bb3df 9a353743a950f93fdaeb20bdd81f1ffdfa702670 shelbourn <11466465+shelbourn@users.noreply.github.com> 1712083228 -0500	commit: adding configs for whitespaces
+9a353743a950f93fdaeb20bdd81f1ffdfa702670 f10aa4478fa0d792bbd114961d79adb5615f5e33 shelbourn <11466465+shelbourn@users.noreply.github.com> 1712168073 -0500	commit: adding plugin for autoclose tag and associated configs
+f10aa4478fa0d792bbd114961d79adb5615f5e33 9c45aa6ae1ab5752a2fc301d87586576e5ac6014 shelbourn <11466465+shelbourn@users.noreply.github.com> 1712206757 -0500	commit: updating some configs and adding plugs
+9c45aa6ae1ab5752a2fc301d87586576e5ac6014 0838592d61b5ec22281195febe02ababb1ff905e shelbourn <11466465+shelbourn@users.noreply.github.com> 1712688378 -0500	commit: couple of config changes / adding copilot
+0838592d61b5ec22281195febe02ababb1ff905e af4e0f41003f9c323c7e0141948fb11a04207612 shelbourn <11466465+shelbourn@users.noreply.github.com> 1713234492 -0500	commit: updating plugs
+af4e0f41003f9c323c7e0141948fb11a04207612 cf9ed5f45d01911ccb1c86879e1077b4f6469312 shelbourn <11466465+shelbourn@users.noreply.github.com> 1713796402 -0500	commit: updating config

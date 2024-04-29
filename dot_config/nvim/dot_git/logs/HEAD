@@ -58,3 +58,5 @@ f10aa4478fa0d792bbd114961d79adb5615f5e33 9c45aa6ae1ab5752a2fc301d87586576e5ac601
 9c45aa6ae1ab5752a2fc301d87586576e5ac6014 0838592d61b5ec22281195febe02ababb1ff905e shelbourn <11466465+shelbourn@users.noreply.github.com> 1712688378 -0500	commit: couple of config changes / adding copilot
 0838592d61b5ec22281195febe02ababb1ff905e af4e0f41003f9c323c7e0141948fb11a04207612 shelbourn <11466465+shelbourn@users.noreply.github.com> 1713234492 -0500	commit: updating plugs
 af4e0f41003f9c323c7e0141948fb11a04207612 cf9ed5f45d01911ccb1c86879e1077b4f6469312 shelbourn <11466465+shelbourn@users.noreply.github.com> 1713796402 -0500	commit: updating config
+cf9ed5f45d01911ccb1c86879e1077b4f6469312 b4eaca9a7ff0fcd8c98f069224d3a55972567c57 shelbourn <11466465+shelbourn@users.noreply.github.com> 1714110773 -0500	commit: updating config
+b4eaca9a7ff0fcd8c98f069224d3a55972567c57 00df81dace28e3ab66e1778c3965d27e9c1b50c0 shelbourn <11466465+shelbourn@users.noreply.github.com> 1714359198 -0500	commit: remapping copilot accept to pervent having a tab nvim cmp conflict

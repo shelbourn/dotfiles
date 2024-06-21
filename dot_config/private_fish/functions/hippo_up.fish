@@ -10,5 +10,6 @@ function hippo_up --description 'Docker up with no legacy build and no dependenc
 
     ##### COMMENTED OUT ALL COMPOSE FNS FOR NOW BECAUSE THEY SUCK #####
 
-    SKIP_LEGACY_FE_BUILD=False SKIP_INSTALL=False MINIFY_JS=False docker compose -f docker-compose.yml -f docker-compose-event-streaming.yml up -d
+    ENABLE_MIRAGE_MOCK=True SKIP_INSTALL=True MINIFY_JS=False docker compose -f docker-compose.yml -f docker-compose-event-streaming.yml up -dd
+
 end

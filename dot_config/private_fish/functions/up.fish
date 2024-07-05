@@ -6,5 +6,5 @@ function up --description 'docker compose up hippo, thor-web, event-streaming'
     end
 
     echo "Docker composing up thor"
-    docker compose -f docker-compose.yml -f up -d --remove-orphans
+    docker compose -f docker-compose.yml up -d --remove-orphans
 end

@@ -1,3 +1,10 @@
 function up --description 'docker compose up hippo, thor-web, event-streaming'
-    docker compose -f docker-compose.yml -f docker-compose-event-streaming.yml up -d
+    if test $argv[1] && test $argv[1] = hippo
+        echo "Docker composing up hippo and event streaming"
+        ENABLE_MIRAGE_MOCK=True SKIP_INSTALL=True MINIFY_JS=False docker compose -f docker-compose.yml -f docker-compose-event-streaming.yml up -d
+        return
+    end
+
+    echo "Docker composing up thor"
+    docker compose -f docker-compose.yml -f up -d
 end

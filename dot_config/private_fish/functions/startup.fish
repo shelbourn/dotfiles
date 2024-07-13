@@ -1,7 +1,7 @@
 function startup --description 'Executes a collection of startup scripts'
     aws_login_1
     # aws_login_2
-    aws_login_thor
+    # aws_login_thor
     mysql_env
     # hippo
     # thor

@@ -1,12 +1,13 @@
 function gc --description 'Git commit (interactive message with vi)'
-    # logical branch if no args
-    # enters vi for verbose git commit messages
-    if test -z $argv
-        git commit
-        return
+    set cmd (commandline -opc)
+    if test (count $cmd) -gt 1
+        set cmd (string join ' ' $cmd[1..-1])
     end
 
-    # logical branch with args
-    # bypasses normal git commit message vi for verbose messages
-    git commit -m $argv
+    if test -z "$cmd"
+        echo "Usage: gc <git command> [git options]"
+        return 1
+    end
+
+    git $cmd
 end

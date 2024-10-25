@@ -8,6 +8,10 @@ pyenv init - | source
 # Sets the auto-complete font color
 set -g fish_color_autosuggestion c6c8cc
 
+# I use the Harleen Fish shell prompt theme
+# $ omf install harleen
+# https://github.com/aneveux/theme-harleen
+
 # theming
 set -g theme_nerd_fonts yes
 set -g theme_color_scheme zenburn

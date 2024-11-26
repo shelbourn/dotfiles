@@ -1,3 +1,4 @@
 function mysql_restart --description 'Restarts the MySQL DB process for localhost'
-brew services restart mysql
+    brew services restart mysql
+    mysql_env
 end

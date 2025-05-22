@@ -5,6 +5,9 @@ end
 kubectl completion fish | source
 pyenv init - | source
 
+# sets env variable for local Hippo with Kafka
+set -gx CODE_PATH /Users/matthew.shelbourn/Projects/Elation
+
 # Sets the auto-complete font color
 set -g fish_color_autosuggestion c6c8cc
 

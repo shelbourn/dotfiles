@@ -1,5 +1,7 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
+    # checks the aws sso status for staticly defined roles (in the function) at shell startup
+    check_sso
 end
 
 kubectl completion fish | source

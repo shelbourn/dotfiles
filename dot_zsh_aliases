@@ -23,6 +23,8 @@ alias react='cd ~/proj/elation/hippo/static/js/react'
 alias api='cd ~/proj/elation/hippo/static/js/react/packages/api-client'
 alias emr='cd ~/proj/elation/hippo/static/js/react/apps/emr'
 alias hippo_bash='docker compose exec --user root hippo bash'
+alias visit_api='cd ~/proj/elation/visit-notes-api'
+alias visit_api_up='docker compose -f docker-compose.yml -f docker-compose-event-streaming.yml up -d'
 
 ###### scripts ######
 
@@ -146,4 +148,25 @@ ab_stop() {
     # execute stop script
     echo "Spinning down billable-scrubber service..."
     scripts/agentic-pipeline-stop.sh
+}
+
+# docker composes up the visit-notes-api service
+visit_up() {
+    # store current working directory
+    local original_dir=$(pwd)
+    echo "Current directory saved: $original_dir"
+
+    # cd to viist-notes-api directory
+    echo "Changing working directory to ../proj/visit-notes-api ..."
+    visit_api || {echo "changing working directory failed"; return 1; }
+
+    # docker composing up
+    echo "Starting visit-notes-api Docker containers..."
+    visit_api_up || {echo "failed to execute docker compose up"; return 1; }
+
+    # Return to original directory
+    echo "Returning to original directory: $original_dir"
+    cd "$original_dir" || { echo "Failed to return to original directory"; return 1; }
+    
+    echo "Process complete, exiting..."
 }

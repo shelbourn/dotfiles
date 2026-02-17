@@ -1,0 +1,149 @@
+###### utilities ######
+
+alias ll='ls -lha'
+alias c='clear'
+alias ga='git add'
+alias gaa='git add .'
+alias gap='git add -p .'
+alias gs='git status -sb'
+alias gc='git commit'
+alias gf='git fetch origin'
+alias gp='git push'
+alias gco='git checkout'
+alias pull='git pull'
+alias dockup='docker compose up -d'
+alias dc='docker compose'
+alias prune='docker system prune -a'
+alias zc='nvim ~/.zshrc'
+alias za='nvim ~/.zsh_aliases'
+alias hippo='cd ~/proj/elation/hippo'
+alias thor='cd ~/proj/elation/thor-app'
+alias scrub='cd ~/proj/elation/billable-scrubber'
+alias react='cd ~/proj/elation/hippo/static/js/react'
+alias api='cd ~/proj/elation/hippo/static/js/react/packages/api-client'
+alias emr='cd ~/proj/elation/hippo/static/js/react/apps/emr'
+alias hippo_bash='docker compose exec --user root hippo bash'
+
+###### scripts ######
+
+# aws auth for local development
+alias aws_dock="aws sso login --profile DockerAccess"
+alias login_west_1="aws ecr get-login-password --profile DockerAccess --region us-west-1 | docker login --username AWS --password-stdin 570488747013.dkr.ecr.us-west-1.amazonaws.com $argv"
+alias login_west_2="aws ecr get-login-password --profile DockerAccess --region us-west-2 | docker login --username AWS --password-stdin 570488747013.dkr.ecr.us-west-2.amazonaws.com"
+alias pypi="aws codeartifact login --tool pip --domain el8-global --domain-owner 570488747013 --repository el8-global-pypi --region us-west-2 --profile DockerAccess $argv"
+
+###### functions ######
+
+# startup processes for local development
+go() {
+    echo "Authenticating with AWS and code artifact for local development..."
+    
+    # Each command will wait for the previous to complete
+    aws_dock || { echo "aws_dock failed"; return 1; }
+    login_west_1 || { echo "login_west_1 failed"; return 1; }
+    login_west_2 || { echo "login_west_2 failed"; return 1; }
+    pypi || { echo "pypi failed"; return 1; }
+    
+    # Save current directory
+    local original_dir=$(pwd)
+    echo "Current directory saved: $original_dir"
+    
+    # Change to billable-scrubber directory and source aws_login.sh
+    echo "Changing to billable-scrubber directory..."
+    cd ~/proj/elation/billable-scrubber || { echo "Failed to cd to billable-scrubber"; return 1; }
+    
+    echo "Sourcing aws_login.sh..."
+    source ./scripts/aws_login.sh || { echo "Failed to source aws_login.sh"; cd "$original_dir"; return 1; }
+    
+    # Return to original directory
+    echo "Returning to original directory: $original_dir"
+    cd "$original_dir" || { echo "Failed to return to original directory"; return 1; }
+    
+    echo "Process complete, exiting..."
+}
+
+# syncs hippo dependencies via ratel and uv
+hippo_deps() {
+    echo "Authenticating via elationemr/ratel..."
+    source ~/proj/elation/ratel/bash/aws/aws_login.sh
+    echo "Process complete, starting dependency sync via UV..."
+    uv sync
+    echo "Process complete, exiting..."
+}
+
+# authenticates with yarn and CA, then updates React dependencies
+react_deps() {
+    # Save current directory
+    local original_dir=$(pwd)
+    echo "Current directory saved: $original_dir"
+
+    # Change working directory to "../react"
+    echo "Changing working directory to ../static/js/react ..."
+    react || {echo "changing working directory failed"; return 1; }
+
+    # authenticate with code artifact
+    echo "Authenticating with Code Artifact..."
+    yarn login:ca || { echo "failed to authenticate with code artifact"; return 1; }
+
+    # install dependencies from frozen lockfile
+    yarn install --frozen-lockfile || { echo "failed to install react dependencies"; return 1; }
+
+    # Return to original directory
+    echo "Returning to original directory: $original_dir"
+    cd "$original_dir" || { echo "Failed to return to original directory"; return 1; }
+    
+    echo "Process complete, exiting..."
+}
+
+# pushes the checked out local (new) git branch to a new git branch on the origin
+gpn() {
+    echo "Pushing current branch to origin..."
+    local local_branch=$(git rev-parse --abbrev-ref HEAD)
+    git push origin -u $local_branch
+    echo "Process complete, exiting..."
+}
+
+# SSO authentication for ReplicaReadAccess
+replica_sso() {
+    echo "Logging in to AWS SSO with ReplicaReadAccess profile..."
+    aws sso login --profile ReplicaReadAccess
+    echo "AWS SSO login complete"
+}
+
+# Generates an AWS RDS token for ReadReplica DB access
+replica_db_login() {
+# Extract only the Token parameter value
+    aws rds generate-db-auth-token \
+        --hostname el8-production-readreplicaaccess-db-1.cfoqlmodbszz.us-east-2.rds.amazonaws.com \
+        --port 3306 \
+        --region us-east-2 \
+        --username readonly \
+        --profile ReplicaReadAccess | sed 's/.*Token=//'
+}
+
+# authenticates with AWS for replica read access and copies the auth token
+replica_login() {
+    echo "Authenticating with AWS via SSO for ReadReplicaAccess..." >&2
+    replica_sso
+    echo "Getting auth token from replica_db_login..." >&2
+    replica_db_login | pbcopy
+    echo "Auth token copied to clipboard" >&2
+}
+
+# executes the billable-scrubber agentic-pipeline-start.sh script
+ab_start() {
+    # cd to ~/billable-scrubber directory
+    scrub
+    # execute start script
+    echo "Spinning up billable-scrubber service..."
+    scripts/agentic-pipeline-start.sh
+}
+
+# executes the billable-scrubber agentic-pipeline-stop.sh script
+ab_stop() {
+    # cd to ~/billable-scrubber directory
+    scrub
+    # execute stop script
+    echo "Spinning down billable-scrubber service..."
+    scripts/agentic-pipeline-stop.sh
+}
